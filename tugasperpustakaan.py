@@ -7,7 +7,7 @@ cart = []
 
 def menampilkanDaftarBuku() :
     print('Daftar Buku\n')
-    print('Index\t| Nama Buku  \t| Jenis Buku \t\t |Stock | Harga Sewa Buku')
+    print('Index\t| Nama Buku  \t| Jenis Buku \t\t |Stock | Harga Sewa')
     for i in range(len(listBuku)) :
         print('{}\t| {}  \t| {}  \t | {}\t| {}'.format(i,listBuku[i]['namabuku'],listBuku[i]['jenis buku'],listBuku[i]['stock'],listBuku[i]['hargasewa']))
 
@@ -78,7 +78,6 @@ def menyewaBuku() :
         else :
             kekurangan = totalHarga - jmlUang
             print('Uang anda kurang sebesar {}'.format(kekurangan))
-
 while True :
     pilihanMenu = input('''
         ---------------Selamat Datang di Perpustakaan Desa--------------
@@ -87,7 +86,7 @@ while True :
         1. Tampilkan Daftar Buku Perpustakaan
         2. Tambah Buku ke Perpustakaan
         3. Menghapus Buku dari Perpustakaan
-        4. Meminjam Buku dari Perpustakaan4
+        4. Meminjam Buku dari Perpustakaan
         5. Exit Program
 
         Masukkan angka Menu yang ingin dijalankan : ''')
@@ -102,4 +101,3 @@ while True :
        menyewaBuku()
     elif(pilihanMenu == '5') :
         break
-    
