@@ -7,7 +7,7 @@ cart = []
 
 def menampilkanDaftarBuku() :
     print('Daftar Buku\n')
-    print('Index\t| Nama Buku  \t| Jenis Buku \t\t |Stock | Harga Sewa Per Hari')
+    print('Index\t| Nama Buku  \t| Jenis Buku \t\t |Stock | Harga Sewa Buku')
     for i in range(len(listBuku)) :
         print('{}\t| {}  \t| {}  \t | {}\t| {}'.format(i,listBuku[i]['namabuku'],listBuku[i]['jenis buku'],listBuku[i]['stock'],listBuku[i]['hargasewa']))
 
