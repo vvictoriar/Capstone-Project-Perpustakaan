@@ -86,8 +86,8 @@ while True :
         List Menu :
         1. Tampilkan Daftar Buku Perpustakaan
         2. Tambah Buku ke Perpustakaan
-        3. Menghapus Buku
-        4. Meminjam Buku
+        3. Menghapus Buku dari Perpustakaan
+        4. Meminjam Buku dari Perpustakaan4
         5. Exit Program
 
         Masukkan angka Menu yang ingin dijalankan : ''')
