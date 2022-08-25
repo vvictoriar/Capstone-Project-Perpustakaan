@@ -35,6 +35,7 @@ def menyewaBuku() :
     while True :
         indexBuku = int(input('Masukkan Index buku yang ingin disewa : '))
         qtyBuah = int(input('Masukkan jumlah yang ingin disewa : '))
+        jmlHari = int(input('Masukkan jumlah jumlah hari : '))
         if(qtyBuah > listBuku[indexBuku]['stock']) :
             print('Stock tidak cukup, stock {} tinggal {}'.format(listBuku[indexBuku]['namabuku'],listBuku[indexBuku]['stock']))
         else :
@@ -42,11 +43,12 @@ def menyewaBuku() :
                 'namabuku': listBuku[indexBuku]['namabuku'], 
                 'jenis buku':  listBuku[indexBuku]['jenis buku'], 
                 'qty': qtyBuah, 
+                'Jumlah Hari Sewa': jmlHari, 
                 'hargasewa': listBuku[indexBuku]['hargasewa'], 
                 'index': indexBuku
             })
         print('Isi Cart :')
-        print('Nama Buku\t| Qty\t| Harga Sewa')
+        print('Nama Buku\t| Qty\t| Harga Sewa Per Hari')
         for item in cart :
             print('{}\t\t| {}\t| {}'.format(item['namabuku'], item['qty'], item['hargasewa']))
         checker = input('Mau sewa yang lain? (ya/tidak) = ')
@@ -54,11 +56,11 @@ def menyewaBuku() :
             break
 
     print('Daftar Peminjaman Buku :')
-    print('Nama Buku\t| Qty\t| Harga Sewa\t| Total Harga')
+    print('Nama Buku\t| Qty\t| Jumlah Hari Sewa \t| Harga Sewa\t| Total Harga')
     totalHarga = 0
     for item in cart :
-        print('{}\t| {}\t| {}\t| {}'.format(item['namabuku'], item['qty'], item['hargasewa'], item['qty'] * item['hargasewa']))
-        totalHarga += item['qty'] * item['hargasewa']    
+        print('{}\t| {}\t| {}\t| {}\t| {}'.format(item['namabuku'], item['qty'], item['Jumlah Hari Sewa'], item['hargasewa'], item['qty'] * item['hargasewa' ]* item['Jumlah Hari Sewa']))
+        totalHarga += item['qty'] * item['hargasewa'] * item['Jumlah Hari Sewa']  
     while True :
         print('Total Yang Harus Dibayar = {}'.format(totalHarga))
         jmlUang = int(input('Masukkan jumlah uang : '))
@@ -101,3 +103,5 @@ while True :
        menyewaBuku()
     elif(pilihanMenu == '5') :
         break
+
+    
