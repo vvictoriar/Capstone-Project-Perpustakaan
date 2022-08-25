@@ -1,4 +1,4 @@
-# Captone-Project-Perpustakaan
+# Capstone-Project-Perpustakaan
 Tugas Capstone Project JCDS07
 
 Tugas Capstone menggunakan bahasa python untuk menghasilkan aplikasi CRUD dimana disini syntax merupakan aplikasi dari sisi operator perpustakaan
